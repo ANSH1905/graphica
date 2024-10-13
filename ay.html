@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outpass Monitoring System</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        header {
+            background-color: #343a40;
+            padding: 10px 20px;
+            color: white;
+            text-align: center;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            flex-grow: 1;
+        }
+
+        .sidebar {
+            width: 200px;
+            background-color: #343a40;
+            padding: 15px;
+            color: white;
+        }
+
+        .sidebar a {
+            color: white;
+            display: block;
+            padding: 10px 0;
+            text-decoration: none;
+        }
+
+        .sidebar a:hover {
+            background-color: #495057;
+        }
+
+        .content {
+            flex-grow: 1;
+            background-color: rgb(250, 220, 220);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table th, table td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+
+        table th {
+            background-color: #343a40;
+            color: white;
+        }
+
+        table td {
+            background-color: #b8d7f7;
+        }
+
+        .approve-btn, .reject-btn {
+            padding: 5px 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .approve-btn {
+            background-color: #28a745;
+            color: white;
+        }
+
+        .reject-btn {
+            background-color: #dc3545;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Outpass Monitoring System - Admin Dashboard  <pre>                                                                                                                            logged in by: <u>Councelor</u></pre>  </h1>
+    
+</header>
+
+<div class="container">
+
+    <!-- Sidebar Navigation -->
+    <div class="sidebar">
+        <a href="#">Dashboard</a>
+        <a href="#">Pending Requests</a>
+        <a href="#">Approved Outpasses</a>
+        <a href="#">Rejected Requests</a>
+        <a href="#">Logout</a>
+    </div>
+
+    <!-- Main Content Area -->
+    <div class="content">
+        <h2>Pending Outpass Requests</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Student Name</th>
+                    <th>Registration Number</th>
+                    <th>Reason</th>
+                    <th>Date of Outpass </th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Aayush Singh</td>
+                    <td>20210001</td>
+                    <td>Medical Leave</td>
+                    <td>2024-10-15</td>
+                    <td>Pending</td>
+                    <td>
+                        <button class="approve-btn" onclick="approveRequest(this)">Approve</button>
+                        <button class="reject-btn" onclick="rejectRequest(this)">Reject</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td> Ansh</td>
+                    <td>20210002</td>
+                    <td>Family Function</td>
+                    <td>2024-10-16</td>
+                    <td>Pending</td>
+                    <td>
+                        <button class="approve-btn" onclick="approveRequest(this)">Approve</button>
+                        <button class="reject-btn" onclick="rejectRequest(this)">Reject</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+<script>
+    function approveRequest(button) {
+        // Change the status of the row to "Approved"
+        const row = button.parentElement.parentElement;
+        row.cells[4].innerText = 'Approved';
+        button.disabled = true; // Disable the approve button
+        row.querySelector('.reject-btn').disabled = true; // Disable the reject button
+    }
+
+    function rejectRequest(button) {
+        // Change the status of the row to "Rejected"
+        const row = button.parentElement.parentElement;
+        row.cells[4].innerText = 'Rejected';
+        button.disabled = true; // Disable the reject button
+        row.querySelector('.approve-btn').disabled = true; // Disable the approve button
+    }
+</script>
+
+</body>
+</html>
