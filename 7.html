@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outpass Request</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            background-color: white;
+            border: 2px solid #007bff;
+            border-radius: 10px;
+            width: 400px;
+            max-height: 80vh; /* Limit the container's height */
+            padding: 20px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            overflow-y: auto; /* Enable scrolling */
+        }
+
+        h1 {
+            text-align: center;
+            color: #007bff;
+        }
+
+        label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px;
+            width: 100%;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Media query for responsiveness */
+        @media (max-width: 500px) {
+            .container {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Outpass Request Form</h1>
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+            <label for="reg_no">Registration Number:</label>
+            <input type="number" id="reg_no" name="reg_no" placeholder="Enter your registration number" required>
+
+            <label for="branch">Branch:</label>
+            <select id="branch" name="branch" required>
+                <option value="">Select your branch</option>
+                <option value="CSE">Computer Science</option>
+                <option value="IT">Information Technology</option>
+                <option value="ENTC">Electronics & Telecommunication</option>
+                <option value="Mech">Mechanical</option>
+                <option value="Civil">Civil Engineering</option>
+            </select>
+
+            <label for="year">Year:</label>
+            <select id="year" name="year" required>
+                <option value="">Select your year</option>
+                <option value="1st">1st Year</option>
+                <option value="2nd">2nd Year</option>
+                <option value="3rd">3rd Year</option>
+                <option value="4th">4th Year</option>
+            </select><br>
+            <label for="fname"><b>* Enter your hostel:</b></label>
+   <input type="text" id="fname" /><br><br>
+   <label for="fname"><b>* Enter your room number:</b></label>
+   <input type="char" id="fname" /><br><br>
+   <label for=""><b>* Enter your Phone number:</b></label>
+    <input type="number"><br><br>
+    <label for=""><b>* Enter your Email:</b></label>
+    <input type="email" size="50"><br><br>
+
+            <label for="from_date">From Date:</label>
+            <input type="date" id="from_date" name="from_date" required>
+
+            <label for="to_date">To Date:</label>
+            <input type="date" id="to_date" name="to_date" required>
+
+            <label for="reason">Reason for Outgoing:</label>
+            <textarea id="reason" name="reason" rows="4" placeholder="State your reason" required></textarea>
+            <input type="Reset"><br>
+    <a target="_blank" href="3.html" ><button type="submit">Submit</button></a>
+        </form>
+    </div>
+
+</body>
+</html>

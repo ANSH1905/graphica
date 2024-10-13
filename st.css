@@ -1,0 +1,120 @@
+/* General Body Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4; /* Light gray background */
+    margin: 0;
+    padding: 20px;
+}
+
+/* Header Styles */
+header {
+    background-color: #dfe772; /* Green background */
+    color: white; /* White text */
+    padding: 20px;
+    text-align: center; /* Center align text */
+}
+
+/* Container Styles */
+.container {
+    max-width: 800px; /* Max width for content */
+    margin: auto; /* Center align container */
+    padding: 20px;
+    background: #fadede; /* White background for container */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Heading Styles */
+h1, h2 {
+    margin: 0; /* Remove default margin */
+}
+
+/* Login Options */
+.login-options {
+    display: flex; /* Flexbox layout */
+    justify-content: space-around; /* Space evenly between buttons */
+    margin-top: 20px; /* Margin above the buttons */
+}
+
+/* Login Button Styles */
+.login-button {
+    background-color: #71f471; /* Green button */
+    color: white; /* White text */
+    padding: 10px 20px; /* Padding inside button */
+    text-decoration: none; /* Remove underline */
+    border-radius: 4px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth hover transition */
+}
+
+/* Button Hover Effect */
+.login-button:hover {
+    background-color: #d3fdd3; /* Darker green on hover */
+}
+
+/* Table Styles */
+table {
+    width: 100%; /* Full width */
+    border-collapse: collapse; /* Merge borders */
+    margin-top: 20px; /* Margin above table */
+}
+
+/* Table Header and Data Cell Styles */
+th, td {
+    padding: 10px; /* Padding inside cells */
+    border: 1px solid #ddd; /* Light gray border */
+    text-align: left; /* Left align text */
+}
+
+/* Table Header Styles */
+th {
+    background-color: #ced2ce; /* Green background for headers */
+    color: white; /* White text for headers */
+}
+
+/* Alternating Row Colors */
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2; /* Light gray for even rows */
+}
+
+/* Form Styles */
+form {
+    display: flex; /* Flexbox layout for the form */
+    flex-direction: column; /* Column layout */
+}
+
+/* Input and Textarea Styles */
+input, textarea {
+    padding: 10px; /* Padding inside inputs */
+    margin: 5px 0 20px; /* Margin around inputs */
+    border: 1px solid #ddd; /* Light gray border */
+    border-radius: 4px; /* Rounded corners */
+    width: 100%; /* Full width */
+}
+
+/* Button Styles for Form Submission */
+button {
+    background-color: #e7e7e7; /* Green button */
+    color: white; /* White text */
+    border: none; /* Remove border */
+    cursor: pointer; /* Pointer on hover */
+}
+
+/* Button Hover Effect for Form Buttons */
+button:hover {
+    background-color: #4cae4c; /* Darker green on hover */
+}
+
+
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4; /* Light gray background */
+    background-image: url('beautiful-wallpaper-download-13.jpg'); /* Add your image path */
+    background-size: cover; /* Cover the entire background */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    margin: 0;
+    padding: 200px;
+}
